@@ -6,7 +6,8 @@ version: 2
 jobs:
   build:
     machine:
-      - image: circleci/classic:latest
+        enabled: true
+        image: circleci/classic:latest
     working_directory: ~/project
     steps:
       - checkout
