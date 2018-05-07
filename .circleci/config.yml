@@ -5,15 +5,18 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/python:2.7
+    machine:
+      - image: circleci/classic:latest
     working_directory: ~/project
     steps:
       - checkout
       - run:
+          name: Install Python
+          command: |
+            yum install -y python-devel python-virtualenv libjpeg-turbo-devel libxslt-devel libxml2-devel libffi-devel pcre-devel libyaml-devel
+      - run:
           name: Build the Distribution
           command: |
-            pip install virtualenv
             virtualenv .venv
             . .venv/bin/activate
             pip install -r src/requirements.txt
