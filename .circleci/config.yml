@@ -12,10 +12,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install Python
-          command: |
-            yum install -y python-devel python-virtualenv libjpeg-turbo-devel libxslt-devel libxml2-devel libffi-devel pcre-devel libyaml-devel
-      - run:
           name: Build the Distribution
           command: |
             virtualenv .venv
