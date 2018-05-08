@@ -1,8 +1,0 @@
-[run]
-branch = true
-include = indico_*
-
-[report]
-exclude_lines =
-    pragma: no cover
-    def __repr__
