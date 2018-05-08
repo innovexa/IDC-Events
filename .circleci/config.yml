@@ -16,7 +16,7 @@ jobs:
           command: |
             virtualenv .venv
             . .venv/bin/activate
-	    pip install -U pip setuptools
+	        pip install -U pip setuptools
             pip install -r src/requirements.txt
             pip install -r src/requirements.dev.txt
             src/bin/maintenance/build-wheel.py indico --add-version-suffix
