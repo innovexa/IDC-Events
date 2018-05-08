@@ -1,5 +1,0 @@
-{% extends 'rb/emails/reservations/base_email_to_manager.txt' %}
-
-{% block body -%}
-A booking on your room '{{ reservation.room.full_name }}' has been CANCELLED by the user.
-{%- endblock %}
