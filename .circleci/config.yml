@@ -13,6 +13,6 @@ jobs:
             virtualenv .venv
             . .venv/bin/activate
             pip install -U pip setuptools
-            pip install -r requirements.txt
-            pip install -r requirements.dev.txt
+            pip install -r src/requirements.txt
+            pip install -r src/requirements.dev.txt
             src/bin/maintenance/build-wheel.py indico --add-version-suffix --ignore-unclean
